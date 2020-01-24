@@ -1,0 +1,11 @@
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\bin\Debug\Lab1_WindowsForms.exe.config
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\bin\Debug\Lab1_WindowsForms.exe
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\bin\Debug\Lab1_WindowsForms.pdb
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.csprojAssemblyReference.cache
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.Form1.resources
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.Properties.Resources.resources
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.csproj.GenerateResource.cache
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.exe
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.pdb
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.Form2.resources
+C:\Users\Fiacre Kouablan\source\repos\Lab1_WindowsForms\Lab1_WindowsForms\obj\Debug\Lab1_WindowsForms.Form3.resources
