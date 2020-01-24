@@ -8,37 +8,32 @@ namespace Lab1_WindowsForms
 {
     class SendViaEmail
     {
-        public static List<String> emails = new List<string>();
-        public String EmailAddr { get; set; }
+        public static List<string> emails = new List<string>();
+        public string EmailAddr { get; set; }
 
         public SendViaEmail() { }
 
-        public SendViaEmail(String emailAddr)
-        {
-            EmailAddr = emailAddr;
-            // Console.WriteLine(emailAddr);
-        }
+        //public SendViaEmail(String emailAddr)
+        //{
+        //    EmailAddr = emailAddr;
+        //    // Console.WriteLine(emailAddr);
+        //}
 
-        public void setEmail(string email)
-        {
-            this.EmailAddr = email;
-
-            if (!emails.Contains(EmailAddr))
-            {
-                emails.Add(EmailAddr);
-            }
-        }
-
-        public string sendEmail(string msg, string email)
+        public string sendEmail(string msg)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"The message" + "\"" + msg + "\" has already been sent to " + email);
+            foreach(string email in emails)
+                sb.AppendLine($"The message" + "\"" + msg + "\" has already been sent to " + email);
             return sb.ToString();
         }
 
         public void Subscribe(Publisher pub)
         {
-            foreach(string eeee in emails)
+            if (!emails.Contains(EmailAddr))
+            {
+                emails.Add(EmailAddr);
+            }
+            foreach (string eeee in emails)
             {
                 pub.publishmsg += sendEmail;
             }
@@ -46,8 +41,16 @@ namespace Lab1_WindowsForms
 
         public void UnSubscribe(Publisher pub)
         {
-            emails.Remove(EmailAddr);
-            pub.publishmsg -= sendEmail;
+            if (emails.Contains(EmailAddr))
+            {
+                emails.Remove(EmailAddr);
+                
+            }
+            foreach(string eeee in emails)
+            {
+                pub.publishmsg -= sendEmail;
+            }
+            
         }
     }
 }

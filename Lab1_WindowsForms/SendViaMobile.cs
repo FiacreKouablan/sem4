@@ -18,9 +18,12 @@ namespace Lab1_WindowsForms
             CellPhone = phone;
         }
 
-        private string sendMessage(string msg, string phone)
+        private string sendMessage(string msg)
         {
-            return $"The message " + "\"" + msg + "\" has already been texted to " + phone;
+            StringBuilder sb = new StringBuilder();
+            foreach (string phone in phoneNumbers)
+                sb.AppendLine($"The message" + "\"" + msg + "\" has already been sent to " + phone);
+            return sb.ToString();
         }
 
         public void Subscribe(Publisher pub)

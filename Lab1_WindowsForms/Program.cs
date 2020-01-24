@@ -8,6 +8,7 @@ namespace Lab1_WindowsForms
 {
     static class Program
     {
+        public static SendViaEmail EmailSender { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,6 +17,7 @@ namespace Lab1_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            EmailSender = new SendViaEmail();
             Application.Run(new Form1());
         }
     }

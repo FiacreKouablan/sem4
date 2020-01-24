@@ -52,8 +52,8 @@ namespace Lab1_WindowsForms
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,})+)$");
             Match match = regex.Match(emailTxt.Text);
             
-            SendViaEmail emailSender = new SendViaEmail(em);
-            emailSender.EmailAddr = emailTxt.Text;
+            Program.EmailSender.EmailAddr = emailTxt.Text;
+
             SendViaMobile mobileSender = new SendViaMobile(numberTxt.Text);
             // Notification notification = new Notification(emailTxt.Text, numberTxt.Text);
             
@@ -71,8 +71,8 @@ namespace Lab1_WindowsForms
                     Form3 publishNotification = new Form3();
                     publishNotification.Show();
                     this.Visible = false;
-                    emailSender.EmailAddr = emailTxt.Text;
-                    emailSender.Subscribe(pub);
+                    Program.EmailSender.EmailAddr = emailTxt.Text;
+                    Program.EmailSender.Subscribe(pub);
                     
                 }
             } else if (ckbSms.Checked)
@@ -122,6 +122,12 @@ namespace Lab1_WindowsForms
                 emailTxt.Enabled = true;
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.EmailSender.EmailAddr = emailTxt.Text;
+            Program.EmailSender.UnSubscribe(pub);
         }
     }
 }

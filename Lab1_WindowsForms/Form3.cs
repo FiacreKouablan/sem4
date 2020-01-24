@@ -26,16 +26,17 @@ namespace Lab1_WindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Form2 manageSubscription = new Form2();
             string message="";
             Publisher pub = new Publisher();
-            SendViaEmail emailSender = new SendViaEmail(manageSubscription.em);
+            //Program.EmailSender = new SendViaEmail(manageSubscription.em);
             //SendViaMobile mobileSender = new SendViaMobile();
             
             //foreach(SendViaEmail ema in SendViaEmail.emails)
             {
                 //ema = emailSender.EmailAddr;
-                message += emailSender.sendEmail(notContentTxt.Text, manageSubscription.em);
+                message += Program.EmailSender.sendEmail(notContentTxt.Text);
             }
            MessageBox.Show(message);
 
